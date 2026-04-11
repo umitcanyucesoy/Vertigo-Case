@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfc1c20e8fb7457c8395e2f71e620ac, type: 3}
+  m_Name: WheelLevelData
+  m_EditorClassIdentifier: 
+  levels:
+  - levelNumber: 1
+    wheelType: 0
+    slots: []
+  - levelNumber: 2
+    wheelType: 0
+    slots: []
+  - levelNumber: 3
+    wheelType: 0
+    slots: []
+  - levelNumber: 4
+    wheelType: 0
+    slots: []
+  - levelNumber: 5
+    wheelType: 1
+    slots: []
+  - levelNumber: 6
+    wheelType: 0
+    slots: []
+  - levelNumber: 7
+    wheelType: 0
+    slots: []
+  - levelNumber: 8
+    wheelType: 0
+    slots: []
+  - levelNumber: 9
+    wheelType: 0
+    slots: []
+  - levelNumber: 10
+    wheelType: 1
+    slots: []
+  - levelNumber: 11
+    wheelType: 0
+    slots: []
+  - levelNumber: 12
+    wheelType: 0
+    slots: []
+  - levelNumber: 13
+    wheelType: 0
+    slots: []
+  - levelNumber: 14
+    wheelType: 0
+    slots: []
+  - levelNumber: 15
+    wheelType: 1
+    slots: []
+  - levelNumber: 16
+    wheelType: 0
+    slots: []
+  - levelNumber: 17
+    wheelType: 0
+    slots: []
+  - levelNumber: 18
+    wheelType: 0
+    slots: []
+  - levelNumber: 19
+    wheelType: 0
+    slots: []
+  - levelNumber: 20
+    wheelType: 1
+    slots: []
+  - levelNumber: 21
+    wheelType: 0
+    slots: []
+  - levelNumber: 22
+    wheelType: 0
+    slots: []
+  - levelNumber: 23
+    wheelType: 0
+    slots: []
+  - levelNumber: 24
+    wheelType: 0
+    slots: []
+  - levelNumber: 25
+    wheelType: 1
+    slots: []
+  - levelNumber: 26
+    wheelType: 0
+    slots: []
+  - levelNumber: 27
+    wheelType: 0
+    slots: []
+  - levelNumber: 28
+    wheelType: 0
+    slots: []
+  - levelNumber: 29
+    wheelType: 0
+    slots: []
+  - levelNumber: 30
+    wheelType: 2
+    slots: []

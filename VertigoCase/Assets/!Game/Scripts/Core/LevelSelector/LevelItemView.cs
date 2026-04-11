@@ -8,60 +8,36 @@ namespace _Game.Scripts.Core.LevelSelector
 {
     public class LevelItemView : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI _levelNumberText;
-        [SerializeField] private Image _backgroundImage;
-        [SerializeField] private GameObject _currentIndicator;
-        [SerializeField] private GameObject _lockIcon;
+        [SerializeField] private LevelItemViewData viewData;
+        [SerializeField] private TextMeshProUGUI levelNumberText;
+        [SerializeField] private Image levelImage;
+        [SerializeField] private GameObject borderFrame;
 
-        [Header("Colors")]
-        [SerializeField] private Color _normalColor = Color.white;
-        [SerializeField] private Color _safeZoneColor = Color.green;
-        [SerializeField] private Color _superZoneColor = Color.yellow;
-        [SerializeField] private Color _lockedColor = Color.gray;
-
-        private ILevelSelectorController _controller;
         private LevelNodeData _data;
 
-        public void Setup(LevelNodeData data, ILevelSelectorController controller)
+        public void Setup(LevelNodeData data)
         {
             _data = data;
-            _controller = controller;
-
-            _levelNumberText.text = data.levelNumber.ToString();
-
+            levelNumberText.text = data.levelNumber.ToString();
             ApplyVisuals();
-        }
-
-        public void OnClick()
-        {
-            _controller?.SelectLevel(_data.levelNumber);
         }
 
         private void ApplyVisuals()
         {
-            bool isLocked = _data.levelState == LevelState.Locked;
-            bool isCurrent = _data.levelState == LevelState.Current;
+            var isCurrent = _data.levelState == LevelState.Current;
 
-            if (_lockIcon != null)
-                _lockIcon.SetActive(isLocked);
-
-            if (_currentIndicator != null)
-                _currentIndicator.SetActive(isCurrent);
-
-            if (_backgroundImage != null)
-                _backgroundImage.color = ResolveColor(isLocked);
+            levelImage.gameObject.SetActive(isCurrent);
+            if (isCurrent) levelImage.sprite = ResolveCurrentSprite();
+            borderFrame.SetActive(isCurrent);
         }
 
-        private Color ResolveColor(bool isLocked)
+        private Sprite ResolveCurrentSprite()
         {
-            if (isLocked)
-                return _lockedColor;
-
             return _data.levelType switch
             {
-                LevelType.SafeZone => _safeZoneColor,
-                LevelType.SuperZone => _superZoneColor,
-                _ => _normalColor
+                LevelType.SafeZone => viewData.safeZoneSprite,
+                LevelType.SuperZone => viewData.superZoneSprite,
+                _ => viewData.currentSprite
             };
         }
     }

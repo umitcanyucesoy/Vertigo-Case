@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using _Game.Scripts.Core.Data;
 using _Game.Scripts.Core.Enums;
 using _Game.Scripts.Event;
@@ -13,15 +14,55 @@ namespace _Game.Scripts.Core.LevelSelector
         [SerializeField] private Transform content;
         [SerializeField] private LevelItemView levelItemPrefab;
 
-        private LevelNodeData[] _levels;
+        private List<LevelNodeData> _levels;
         private int _currentLevel;
+        private int _totalLevels;
 
         public void Init(LevelSelectorData data)
         {
             _currentLevel = 1;
-            _levels = BuildLevels(data);
+            _totalLevels = data.totalLevels;
+            _levels = BuildRuntimeLevels(data);
             SpawnItems();
-            ScrollToCurrentLevel(data.totalLevels);
+            ScrollToCurrentLevel(_totalLevels);
+            SelectLevel(_currentLevel);
+
+            EventBus.Subscribe<WheelRewardCollectedEvent>(OnRewardCollected);
+        }
+
+        private void OnDestroy()
+        {
+            EventBus.Unsubscribe<WheelRewardCollectedEvent>(OnRewardCollected);
+        }
+
+        private void OnRewardCollected(WheelRewardCollectedEvent e)
+        {
+            AdvanceLevel();
+        }
+
+        private void AdvanceLevel()
+        {
+            if (_currentLevel >= _totalLevels) return;
+
+            _currentLevel++;
+            RefreshLevelStates();
+            SpawnItems();
+            ScrollToCurrentLevel(_totalLevels);
+            SelectLevel(_currentLevel);
+        }
+
+        private void RefreshLevelStates()
+        {
+            for (int i = 0; i < _levels.Count; i++)
+            {
+                var node = _levels[i];
+                _levels[i] = new LevelNodeData
+                {
+                    levelNumber = node.levelNumber,
+                    levelType = node.levelType,
+                    levelState = ResolveState(node.levelNumber)
+                };
+            }
         }
 
         public int GetCurrentLevel() => _currentLevel;
@@ -40,6 +81,30 @@ namespace _Game.Scripts.Core.LevelSelector
             });
         }
 
+        private List<LevelNodeData> BuildRuntimeLevels(LevelSelectorData data)
+        {
+            var list = new List<LevelNodeData>(data.Levels.Count);
+
+            foreach (var node in data.Levels)
+            {
+                list.Add(new LevelNodeData
+                {
+                    levelNumber = node.levelNumber,
+                    levelType = node.levelType,
+                    levelState = ResolveState(node.levelNumber)
+                });
+            }
+
+            return list;
+        }
+
+        private LevelState ResolveState(int levelNumber)
+        {
+            if (levelNumber < _currentLevel) return LevelState.Completed;
+            if (levelNumber == _currentLevel) return LevelState.Current;
+            return LevelState.Locked;
+        }
+
         private void SpawnItems()
         {
             foreach (Transform child in content)
@@ -48,13 +113,13 @@ namespace _Game.Scripts.Core.LevelSelector
             foreach (var data in _levels)
             {
                 var item = Instantiate(levelItemPrefab, content);
-                item.Setup(data, this);
+                item.Setup(data);
             }
         }
 
         private void ScrollToCurrentLevel(int totalLevels)
         {
-            float targetPos = (float)(_currentLevel - 1) / (totalLevels - 1);
+            var targetPos = (float)(_currentLevel - 1) / (totalLevels - 1);
 
             DOTween.To(
                 () => scrollRect.horizontalNormalizedPosition,
@@ -62,42 +127,6 @@ namespace _Game.Scripts.Core.LevelSelector
                 targetPos,
                 0.5f
             ).SetEase(Ease.OutCubic);
-        }
-
-        private LevelNodeData[] BuildLevels(LevelSelectorData data)
-        {
-            var levels = new LevelNodeData[data.totalLevels];
-
-            for (int i = 0; i < data.totalLevels; i++)
-            {
-                int number = i + 1;
-                levels[i] = new LevelNodeData
-                {
-                    levelNumber = number,
-                    levelType = ResolveType(number, data),
-                    levelState = ResolveState(number)
-                };
-            }
-
-            return levels;
-        }
-
-        private LevelType ResolveType(int levelNumber, LevelSelectorData data)
-        {
-            if (levelNumber == data.superZoneLevel)
-                return LevelType.SuperZone;
-
-            if (levelNumber % data.safeZoneInterval == 0)
-                return LevelType.SafeZone;
-
-            return LevelType.Normal;
-        }
-
-        private LevelState ResolveState(int levelNumber)
-        {
-            if (levelNumber < _currentLevel) return LevelState.Completed;
-            if (levelNumber == _currentLevel) return LevelState.Current;
-            return LevelState.Locked;
         }
     }
 }
