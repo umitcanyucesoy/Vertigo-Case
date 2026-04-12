@@ -98,13 +98,22 @@ namespace _Game.Scripts.Core.FortuneWheel
 
             var winningIndex = PickWinningSlot();
             var targetAngle = CalculateTargetAngle(winningIndex);
+            var targetRotation = new Vector3(0f, 0f, targetAngle);
 
             wheelTransform.rotation = Quaternion.identity;
+            frameImage.transform.rotation = Quaternion.identity;
 
             var sequence = DOTween.Sequence();
             sequence.Append(
                 wheelTransform.DORotate(
-                    new Vector3(0f, 0f, targetAngle),
+                    targetRotation,
+                    _currentConfig.spinDuration,
+                    RotateMode.FastBeyond360
+                ).SetEase(Ease.OutQuart)
+            );
+            sequence.Join(
+                frameImage.transform.DORotate(
+                    targetRotation,
                     _currentConfig.spinDuration,
                     RotateMode.FastBeyond360
                 ).SetEase(Ease.OutQuart)
@@ -138,12 +147,12 @@ namespace _Game.Scripts.Core.FortuneWheel
         }
 
         private int PickWinningSlot() => Random.Range(0, _currentSlots.Count);
-        
+
         private float CalculateTargetAngle(int slotIndex)
         {
-            var slotAngle = 360f / _currentSlots.Count;
-            var slotCenter = slotIndex * slotAngle + slotAngle * 0.5f;
-            return _currentConfig.minFullRotations * 360f + slotCenter;
+            const float slotAngle = 45f;
+            int fullRotations = _currentConfig.minFullRotations + Random.Range(0, 3);
+            return fullRotations * 360f + slotIndex * slotAngle;
         }
 
         private void HideWheel()

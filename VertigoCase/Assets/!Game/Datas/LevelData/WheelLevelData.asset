@@ -15,91 +15,1102 @@ MonoBehaviour:
   levels:
   - levelNumber: 1
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 2
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 3
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 4
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 5
     wheelType: 1
-    slots: []
+    slots:
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: 1594b188081504d6780abf60a1c42e19, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: 6ea4d0d4979ab4115bbfde41656a26b4, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d5d0f9b5bf3104cb4a2861901a386b3e, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: e144b37073a40469487da018d817dbc6, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: fef7630d596c849d2b439de4c763942d, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: c6df3e570d3584c4187cd0f34aafa673, type: 3}
+      multiplier: 0
   - levelNumber: 6
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 7
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 8
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 9
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 10
     wheelType: 1
-    slots: []
+    slots:
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: 1594b188081504d6780abf60a1c42e19, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: 6ea4d0d4979ab4115bbfde41656a26b4, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d5d0f9b5bf3104cb4a2861901a386b3e, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: e144b37073a40469487da018d817dbc6, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: fef7630d596c849d2b439de4c763942d, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: c6df3e570d3584c4187cd0f34aafa673, type: 3}
+      multiplier: 0
   - levelNumber: 11
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 12
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 13
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 14
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 15
     wheelType: 1
-    slots: []
+    slots:
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: 1594b188081504d6780abf60a1c42e19, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: 6ea4d0d4979ab4115bbfde41656a26b4, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d5d0f9b5bf3104cb4a2861901a386b3e, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: e144b37073a40469487da018d817dbc6, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: fef7630d596c849d2b439de4c763942d, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: c6df3e570d3584c4187cd0f34aafa673, type: 3}
+      multiplier: 0
   - levelNumber: 16
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 17
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 18
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 19
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 20
     wheelType: 1
-    slots: []
+    slots:
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: 1594b188081504d6780abf60a1c42e19, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: 6ea4d0d4979ab4115bbfde41656a26b4, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d5d0f9b5bf3104cb4a2861901a386b3e, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: e144b37073a40469487da018d817dbc6, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: fef7630d596c849d2b439de4c763942d, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: c6df3e570d3584c4187cd0f34aafa673, type: 3}
+      multiplier: 0
   - levelNumber: 21
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 22
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 23
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 24
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 25
     wheelType: 1
-    slots: []
+    slots:
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: 1594b188081504d6780abf60a1c42e19, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: 6ea4d0d4979ab4115bbfde41656a26b4, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d5d0f9b5bf3104cb4a2861901a386b3e, type: 3}
+      multiplier: 0
+    - rewardType: 7
+      amount: 0
+      icon: {fileID: 21300000, guid: e144b37073a40469487da018d817dbc6, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: fef7630d596c849d2b439de4c763942d, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: c6df3e570d3584c4187cd0f34aafa673, type: 3}
+      multiplier: 0
   - levelNumber: 26
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 27
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 28
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 29
     wheelType: 0
-    slots: []
+    slots:
+    - rewardType: 0
+      amount: 0
+      icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+      multiplier: 0
+    - rewardType: 1
+      amount: 0
+      icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+      multiplier: 0
+    - rewardType: 6
+      amount: 0
+      icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+      multiplier: 0
+    - rewardType: 5
+      amount: 0
+      icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+      multiplier: 0
+    - rewardType: 2
+      amount: 0
+      icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+      multiplier: 0
+    - rewardType: 3
+      amount: 0
+      icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+      multiplier: 0
+    - rewardType: 4
+      amount: 0
+      icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+      multiplier: 0
   - levelNumber: 30
     wheelType: 2
-    slots: []
+    slots:
+    - rewardType: 8
+      amount: 0
+      icon: {fileID: 21300000, guid: 31c65da590cc4492f92e775116f29333, type: 3}
+      multiplier: 0
+    - rewardType: 8
+      amount: 0
+      icon: {fileID: 21300000, guid: 0d2605e90efdd4809a52ed756118d705, type: 3}
+      multiplier: 0
+    - rewardType: 9
+      amount: 0
+      icon: {fileID: 21300000, guid: 766ff8cff22c346f09bb82fb0d9829f9, type: 3}
+      multiplier: 0
+    - rewardType: 9
+      amount: 0
+      icon: {fileID: 21300000, guid: 916b89e9171a248f0a8787f91119eb7a, type: 3}
+      multiplier: 0
+    - rewardType: 8
+      amount: 0
+      icon: {fileID: 21300000, guid: b41a643ed5c2043c68bb39ead66f8bba, type: 3}
+      multiplier: 0
+    - rewardType: 8
+      amount: 0
+      icon: {fileID: 21300000, guid: 33a5a91b1e94f443c8516e5c46cfc67e, type: 3}
+      multiplier: 0
+    - rewardType: 8
+      amount: 0
+      icon: {fileID: 21300000, guid: 3ff030501be034aa899152be33c7d765, type: 3}
+      multiplier: 0
+    - rewardType: 9
+      amount: 0
+      icon: {fileID: 21300000, guid: 401684ff7eae2483fb2d2f24d75fcede, type: 3}
+      multiplier: 0
+  normalZoneSlots:
+  - rewardType: 0
+    icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+  - rewardType: 1
+    icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+  - rewardType: 4
+    icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+  - rewardType: 6
+    icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+  - rewardType: 5
+    icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+  - rewardType: 2
+    icon: {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+  - rewardType: 3
+    icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+  - rewardType: 4
+    icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+  safeZoneSlots:
+  - rewardType: 1
+    icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+  - rewardType: 0
+    icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+  - rewardType: 7
+    icon: {fileID: 21300000, guid: 1594b188081504d6780abf60a1c42e19, type: 3}
+  - rewardType: 7
+    icon: {fileID: 21300000, guid: 6ea4d0d4979ab4115bbfde41656a26b4, type: 3}
+  - rewardType: 4
+    icon: {fileID: 21300000, guid: d5d0f9b5bf3104cb4a2861901a386b3e, type: 3}
+  - rewardType: 7
+    icon: {fileID: 21300000, guid: e144b37073a40469487da018d817dbc6, type: 3}
+  - rewardType: 4
+    icon: {fileID: 21300000, guid: fef7630d596c849d2b439de4c763942d, type: 3}
+  - rewardType: 6
+    icon: {fileID: 21300000, guid: c6df3e570d3584c4187cd0f34aafa673, type: 3}
+  superZoneSlots:
+  - rewardType: 8
+    icon: {fileID: 21300000, guid: 31c65da590cc4492f92e775116f29333, type: 3}
+  - rewardType: 8
+    icon: {fileID: 21300000, guid: 0d2605e90efdd4809a52ed756118d705, type: 3}
+  - rewardType: 9
+    icon: {fileID: 21300000, guid: 766ff8cff22c346f09bb82fb0d9829f9, type: 3}
+  - rewardType: 9
+    icon: {fileID: 21300000, guid: 916b89e9171a248f0a8787f91119eb7a, type: 3}
+  - rewardType: 8
+    icon: {fileID: 21300000, guid: b41a643ed5c2043c68bb39ead66f8bba, type: 3}
+  - rewardType: 8
+    icon: {fileID: 21300000, guid: 33a5a91b1e94f443c8516e5c46cfc67e, type: 3}
+  - rewardType: 8
+    icon: {fileID: 21300000, guid: 3ff030501be034aa899152be33c7d765, type: 3}
+  - rewardType: 9
+    icon: {fileID: 21300000, guid: 401684ff7eae2483fb2d2f24d75fcede, type: 3}

@@ -3,10 +3,14 @@ namespace _Game.Scripts.Core.Enums
     public enum RewardType
     {
         Gold,
-        Gem,
-        Life,
+        Money,
+        Health,
         Bomb,
         Chest,
-        Multiplier
+        Death,
+        Points,
+        Equipment,
+        Weapon,
+        Knife
     }
 }

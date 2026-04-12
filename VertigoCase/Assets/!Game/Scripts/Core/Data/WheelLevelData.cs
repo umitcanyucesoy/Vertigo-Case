@@ -10,6 +10,11 @@ namespace _Game.Scripts.Core.Data
     {
         public List<WheelLevelEntry> levels = new();
 
+        [Header("Zone Slot Templates")]
+        public ZoneSlotTemplate[] normalZoneSlots = new ZoneSlotTemplate[8];
+        public ZoneSlotTemplate[] safeZoneSlots = new ZoneSlotTemplate[8];
+        public ZoneSlotTemplate[] superZoneSlots = new ZoneSlotTemplate[8];
+
         public WheelLevelEntry GetEntryForLevel(int levelNumber)
         {
             foreach (var entry in levels)
@@ -28,5 +33,12 @@ namespace _Game.Scripts.Core.Data
         public int levelNumber;
         public LevelType wheelType;
         public List<WheelSlotData> slots;
+    }
+    
+    [Serializable]
+    public struct ZoneSlotTemplate
+    {
+        public RewardType rewardType;
+        public Sprite icon;
     }
 }

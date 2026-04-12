@@ -11,10 +11,7 @@ namespace _Game.Scripts.Core.Data
         public int totalLevels = 30;
         public int safeZoneInterval = 5;
         public int superZoneLevel = 30;
-
-        [Header("Wheel Data Reference")]
-        public WheelLevelData wheelLevelData;
-
+        
         [SerializeField] private List<LevelNodeData> levels = new();
         public IReadOnlyList<LevelNodeData> Levels => levels;
 
