@@ -19,19 +19,19 @@ MonoBehaviour:
     - rewardType: 0
       amount: 0
       icon: {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
-      multiplier: 0
+      multiplier: 10
     - rewardType: 1
       amount: 0
       icon: {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
-      multiplier: 0
+      multiplier: 20
     - rewardType: 4
       amount: 0
       icon: {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
-      multiplier: 0
+      multiplier: 1
     - rewardType: 6
       amount: 0
       icon: {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
-      multiplier: 0
+      multiplier: 1
     - rewardType: 5
       amount: 0
       icon: {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
@@ -43,11 +43,11 @@ MonoBehaviour:
     - rewardType: 3
       amount: 0
       icon: {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
-      multiplier: 0
+      multiplier: 2
     - rewardType: 4
       amount: 0
       icon: {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
-      multiplier: 0
+      multiplier: 2
   - levelNumber: 2
     wheelType: 0
     slots:

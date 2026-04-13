@@ -28,16 +28,32 @@ namespace _Game.Scripts.Core.LevelSelector
             SelectLevel(_currentLevel);
 
             EventBus.Subscribe<WheelRewardCollectedEvent>(OnRewardCollected);
+            EventBus.Subscribe<GiveUpEvent>(OnGiveUp);
         }
 
         private void OnDestroy()
         {
             EventBus.Unsubscribe<WheelRewardCollectedEvent>(OnRewardCollected);
+            EventBus.Unsubscribe<GiveUpEvent>(OnGiveUp);
         }
 
         private void OnRewardCollected(WheelRewardCollectedEvent e)
         {
             AdvanceLevel();
+        }
+
+        private void OnGiveUp(GiveUpEvent e)
+        {
+            ResetLevel();
+        }
+
+        private void ResetLevel()
+        {
+            _currentLevel = 1;
+            RefreshLevelStates();
+            SpawnItems();
+            ScrollToCurrentLevel(_totalLevels);
+            SelectLevel(_currentLevel);
         }
 
         private void AdvanceLevel()

@@ -137,13 +137,24 @@ namespace _Game.Scripts.Core.FortuneWheel
 
             spinButton.interactable = true;
 
-            EventBus.Publish(new WheelRewardCollectedEvent
+            if (reward.rewardType == RewardType.Death)
             {
-                LevelNumber = _currentLevelNumber,
-                RewardType = reward.rewardType,
-                Amount = reward.amount,
-                Multiplier = reward.multiplier
-            });
+                EventBus.Publish(new ShowDeathPanelEvent
+                {
+                    LevelNumber = _currentLevelNumber
+                });
+            }
+            else
+            {
+                EventBus.Publish(new ShowRewardPanelEvent
+                {
+                    LevelNumber = _currentLevelNumber,
+                    RewardType = reward.rewardType,
+                    Icon = reward.icon,
+                    Amount = reward.amount,
+                    Multiplier = reward.multiplier
+                });
+            }
         }
 
         private int PickWinningSlot() => Random.Range(0, _currentSlots.Count);
@@ -152,7 +163,7 @@ namespace _Game.Scripts.Core.FortuneWheel
         {
             const float slotAngle = 45f;
             int fullRotations = _currentConfig.minFullRotations + Random.Range(0, 3);
-            return fullRotations * 360f + slotIndex * slotAngle;
+            return fullRotations * 360f - slotIndex * slotAngle;
         }
 
         private void HideWheel()

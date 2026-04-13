@@ -1,6 +1,8 @@
 using _Game.Scripts.Core.Data;
+using _Game.Scripts.Core.DeathPanel;
 using _Game.Scripts.Core.FortuneWheel;
 using _Game.Scripts.Core.LevelSelector;
+using _Game.Scripts.Core.RewardPanel;
 using UnityEngine;
 
 namespace _Game.Scripts.Core.Launch
@@ -15,9 +17,13 @@ namespace _Game.Scripts.Core.Launch
         [Header("Controller")]
         [SerializeField] private LevelSelectorController levelSelectorController;
         [SerializeField] private FortuneWheelController fortuneWheelController;
+        [SerializeField] private RewardPanelController rewardPanelController;
+        [SerializeField] private DeathPanelController deathPanelController;
 
         private ILevelSelectorController _levelSelectorController;
         private IFortuneWheelController _fortuneWheelController;
+        private IRewardPanelController _rewardPanelController;
+        private IDeathPanelController _deathPanelController;
 
         private void Awake()
         {
@@ -33,11 +39,15 @@ namespace _Game.Scripts.Core.Launch
         {
             _levelSelectorController = levelSelectorController;
             _fortuneWheelController = fortuneWheelController;
+            _rewardPanelController = rewardPanelController;
+            _deathPanelController = deathPanelController;
         }
 
         private void InitSystems()
         {
             _fortuneWheelController.Init(wheelLevelData, wheelConfigs);
+            _rewardPanelController.Init();
+            _deathPanelController.Init();
             _levelSelectorController.Init(levelSelectorData);
         }
     }
