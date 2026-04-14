@@ -8,7 +8,6 @@ namespace _Game.Scripts.Core.Data
     public struct WheelSlotData
     {
         public RewardType rewardType;
-        public int amount;
         public Sprite icon;
         public int multiplier;
     }

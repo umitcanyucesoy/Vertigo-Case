@@ -13,10 +13,7 @@ namespace _Game.Scripts.Core.FortuneWheel
         public void Setup(WheelSlotData data)
         {
             iconImage.sprite = data.icon;
-
-            amountText.text = data.multiplier > 1
-                ? $"x{data.multiplier}"
-                : data.amount.ToString();
+            amountText.text = data.multiplier <= 0 ? string.Empty : $"x{data.multiplier}";
         }
     }
 }

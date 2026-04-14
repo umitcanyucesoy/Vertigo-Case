@@ -1,7 +1,9 @@
+using _Game.Scripts.Core.CollectedRewardsPanel;
+
 namespace _Game.Scripts.Core.RewardPanel
 {
     public interface IRewardPanelController
     {
-        public void Init();
+        void Init(ICollectedRewardsPanelController collectedRewardsPanel);
     }
 }

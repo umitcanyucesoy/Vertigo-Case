@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI_Atlas_Wheel
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 9621937771bdb4100b89924b20b6dcad, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3ff030501be034aa899152be33c7d765, type: 3}
+  - {fileID: 21300000, guid: e144b37073a40469487da018d817dbc6, type: 3}
+  - {fileID: 21300000, guid: b9d48802ef376460b9de3a97df3de3b2, type: 3}
+  - {fileID: 21300000, guid: ef67f9324033d418ca4f66612181cf4f, type: 3}
+  - {fileID: 21300000, guid: 2f4ee1727deba414eab7f2166e376504, type: 3}
+  - {fileID: 21300000, guid: 541693724a6804baab58c851d5857729, type: 3}
+  - {fileID: 21300000, guid: 434b1713e37de485c9d9c0a40feffdc9, type: 3}
+  - {fileID: 21300000, guid: e4b151437ff4f4fbf857a861ebaf19fe, type: 3}
+  - {fileID: 21300000, guid: 3c93e95371f314c07b26f9eb0cf9b7e5, type: 3}
+  - {fileID: 21300000, guid: 7ac1de249d61c45aea408ad67a9b6b50, type: 3}
+  - {fileID: 21300000, guid: 4f891244469414da6b5fa03ebe587a2c, type: 3}
+  - {fileID: 21300000, guid: 6ea4d0d4979ab4115bbfde41656a26b4, type: 3}
+  - {fileID: 21300000, guid: decc4ef414af9434dabe818217027ad0, type: 3}
+  - {fileID: 21300000, guid: 31c65da590cc4492f92e775116f29333, type: 3}
+  - {fileID: 21300000, guid: d5d0f9b5bf3104cb4a2861901a386b3e, type: 3}
+  - {fileID: 21300000, guid: 72908c665a9474563a32d278da23b87a, type: 3}
+  - {fileID: 21300000, guid: 88b07a7688f0d43ea9ed8b8306945a17, type: 3}
+  - {fileID: 21300000, guid: c79478a6b2be8486aad1634b9052cacb, type: 3}
+  - {fileID: 21300000, guid: c6df3e570d3584c4187cd0f34aafa673, type: 3}
+  - {fileID: 21300000, guid: ba5d336872fdb42e98b39ef6ba98dedd, type: 3}
+  - {fileID: 21300000, guid: 1594b188081504d6780abf60a1c42e19, type: 3}
+  - {fileID: 21300000, guid: d402c798b1565487aa8b91c809d3b416, type: 3}
+  - {fileID: 21300000, guid: 7096fa591a40d4c6c9233f08da775e32, type: 3}
+  - {fileID: 21300000, guid: 791cfda96f62644db83f3440f6521529, type: 3}
+  - {fileID: 21300000, guid: 0d2605e90efdd4809a52ed756118d705, type: 3}
+  - {fileID: 21300000, guid: 916b89e9171a248f0a8787f91119eb7a, type: 3}
+  - {fileID: 21300000, guid: bf6e8a9a4ca9647629fc64278a58df22, type: 3}
+  - {fileID: 21300000, guid: cda21eaa371a74b278aacecaa3cbcdcf, type: 3}
+  - {fileID: 21300000, guid: dc514bfaba7aa4c73ae446f2e994692f, type: 3}
+  - {fileID: 21300000, guid: 33a5a91b1e94f443c8516e5c46cfc67e, type: 3}
+  - {fileID: 21300000, guid: 10a377cbc7fd24cd5b8520424be0d9ef, type: 3}
+  - {fileID: 21300000, guid: 60646e9cfef9d400eabba3d1c5a0d6b1, type: 3}
+  - {fileID: 21300000, guid: faa73eacc81ce45f7969bf74d07c6c8a, type: 3}
+  - {fileID: 21300000, guid: 0f2b1cec3704249f78d6b6690c7a18d0, type: 3}
+  - {fileID: 21300000, guid: fef7630d596c849d2b439de4c763942d, type: 3}
+  - {fileID: 21300000, guid: c2425d5d8ba59490a9f40e6b7cc5248e, type: 3}
+  - {fileID: 21300000, guid: 5d72137dcc2f148ff8ff3537e9e65eca, type: 3}
+  - {fileID: 21300000, guid: b41a643ed5c2043c68bb39ead66f8bba, type: 3}
+  - {fileID: 21300000, guid: af11554e220eb4753852c1d98a45829e, type: 3}
+  - {fileID: 21300000, guid: 27de418eed4984c408c359ab5f6be3b5, type: 3}
+  - {fileID: 21300000, guid: b49593dec6a8f466ab0874c827fc0cff, type: 3}
+  - {fileID: 21300000, guid: 470fceeec99a641b8b627912e06a520c, type: 3}
+  - {fileID: 21300000, guid: f603039f2d8564198ac617d7f64394da, type: 3}
+  - {fileID: 21300000, guid: f9a0e1cfa98f344a594df735213a04db, type: 3}
+  - {fileID: 21300000, guid: 766ff8cff22c346f09bb82fb0d9829f9, type: 3}
+  - {fileID: 21300000, guid: c72716df900544e019f5be7cf99443d3, type: 3}
+  - {fileID: 21300000, guid: 0e6cfeef8d205418ba1d8333e1045013, type: 3}
+  - {fileID: 21300000, guid: 401684ff7eae2483fb2d2f24d75fcede, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - UI_Icon_Renders_tier1_shotgun
+  - ui_icon_helmet_pumpkin
+  - ui_spin_bronze_indicator
+  - UI_icon_chest_super_nolight
+  - UI_Icons_SMG_Points
+  - ui_spin_bronze_base
+  - UI_icon_chest_small_noligt
+  - ui_vfx_offer_shine
+  - UI_Icons_Submachine_Points
+  - ui_spin_generic_button
+  - ui_spin_silver_base
+  - ui_icon_aviator_glasses_easter
+  - UI_Icons_Pistol_Points_
+  - UI_Icon_Renders_tier3_sniper
+  - UI_icon_chest_silver_nolight
+  - star_glow_alpha
+  - ui_icon_render_cons_grenade_m26
+  - ui_icon_render_cons_healthshot_2_neurostim
+  - UI_Icons_Knife_Points
+  - ui_icon_render_cons_healthshot_2_regenerator
+  - ui_icon_baseball_cap_easter
+  - UI_icon_chest_Bronze_nolight
+  - UI_button_orange_standard
+  - UI_Icons_Vest_Points
+  - UI_Icon_Renders_tier3_smg
+  - ui_icon_mle_bayonet_easter_time
+  - ui_spin_golden_base
+  - ui_icon_render_cons_grenade_m67
+  - UI_Icons_Armor_Points
+  - UI_Icon_Renders_tier2_rifle
+  - UI_Icons_Pistol_Points
+  - UI_Icons_Shotgun_Points
+  - ui_spin_golden_indicator
+  - UI_icon_gold
+  - UI_icon_chest_gold_nolight
+  - UI_icon_chest_standart_nolight
+  - UI_Icons_Sniper_Points
+  - UI_Icon_Renders_tier3_shotgun
+  - star_flash_alpha
+  - UI_icon_chest_big_nolight
+  - UI_Icons_Rifle_Points
+  - UI_icon_cash
+  - ui_card_icon_death
+  - UI_button_grey_standard
+  - ui_icon_mle_bayonet_summer_vice
+  - ui_spin_silver_indicator
+  - ui_icon_render_t_cons_molotov
+  - UI_Icon_Renders_tier2_mle
+  m_RenderDataMap: {}
+  m_Tag: UI_Atlas_Wheel
+  m_IsVariant: 0

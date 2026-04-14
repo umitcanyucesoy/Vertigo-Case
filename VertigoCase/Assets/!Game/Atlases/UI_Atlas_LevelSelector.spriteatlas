@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI_Atlas_LevelSelector
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 437edb8ba31f54da4af465c05f3189ae, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 99e6e962cfd814bd8a5ee8954d3cd3c3, type: 3}
+  - {fileID: 21300000, guid: 51d9d1c414f964c8e9e5f5e76ba61cb2, type: 3}
+  - {fileID: 21300000, guid: 715919878b19f455d8a4ed60323abe45, type: 3}
+  - {fileID: 21300000, guid: a97d00c72332a49899e4685abc11e1af, type: 3}
+  - {fileID: 21300000, guid: 09f07178ca7ab42f39f0dfa53b0d1621, type: 3}
+  - {fileID: 21300000, guid: f4ec1e7843c0c44328d5ea31ae5f62fe, type: 3}
+  - {fileID: 21300000, guid: cc93f619ac3f248c6b9cc3327ab4c5f6, type: 3}
+  - {fileID: 21300000, guid: 4d2db22cadbd041279ea70a7bae859c2, type: 3}
+  - {fileID: 21300000, guid: 11f0ea1f6f4234e25985a820331c9127, type: 3}
+  - {fileID: 21300000, guid: 4782086f16739434b875516d422ac6f9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - ui_card_zone_map_frame
+  - ui_card_panel_zone_bg
+  - ui_card_panel_zone_super
+  - ui_card_frame_4px_zone
+  - ui_card_frame_gardient
+  - ui_card_frame_12px_neutral
+  - ui_card_panel_zone_coming
+  - ui_card_panel_zone_current_white
+  - ui_card_panel_zone_current
+  - ui_card_panel_zone_white
+  m_RenderDataMap: {}
+  m_Tag: UI_Atlas_LevelSelector
+  m_IsVariant: 0

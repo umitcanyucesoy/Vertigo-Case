@@ -5,18 +5,13 @@ using _Game.Scripts.Event;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace _Game.Scripts.Core.FortuneWheel
 {
+    [RequireComponent(typeof(FortuneWheelView))]
     public class FortuneWheelController : MonoBehaviour, IFortuneWheelController
     {
-        [SerializeField] private Transform wheelTransform;
-        [SerializeField] private Image frameImage;
-        [SerializeField] private Image indicatorImage;
-        [SerializeField] private Button spinButton;
-        [SerializeField] private List<WheelSlotView> slotViews;
-        [SerializeField] private CanvasGroup canvasGroup;
+        [SerializeField] private FortuneWheelView view;
 
         private WheelLevelData _levelData;
         private Dictionary<LevelType, WheelConfigData> _configs;
@@ -32,7 +27,7 @@ namespace _Game.Scripts.Core.FortuneWheel
 
             foreach (var config in configs) _configs[config.wheelType] = config;
 
-            spinButton.onClick.AddListener(OnSpinButtonClicked);
+            view.SpinButton.onClick.AddListener(OnSpinButtonClicked);
             EventBus.Subscribe<LevelSelectedEvent>(OnLevelSelected);
 
             HideWheel();
@@ -40,12 +35,19 @@ namespace _Game.Scripts.Core.FortuneWheel
 
         private void OnDestroy()
         {
-            spinButton.onClick.RemoveAllListeners();
+            view.SpinButton.onClick.RemoveAllListeners();
             EventBus.Unsubscribe<LevelSelectedEvent>(OnLevelSelected);
         }
-        
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            view = GetComponent<FortuneWheelView>();
+        }
+#endif
+
         private void OnLevelSelected(LevelSelectedEvent handle) => ShowWheel(handle.LevelNumber, handle.LevelType);
-        
+
         public void ShowWheel(int levelNumber, LevelType levelType)
         {
             _currentLevelNumber = levelNumber;
@@ -59,29 +61,31 @@ namespace _Game.Scripts.Core.FortuneWheel
             ApplyVisuals();
             PopulateSlots();
 
-            canvasGroup.alpha = 0f;
-            canvasGroup.gameObject.SetActive(true);
-            canvasGroup.DOFade(1f, 0.3f);
+            view.CanvasGroup.alpha = 0f;
+            view.CanvasGroup.gameObject.SetActive(true);
+            view.CanvasGroup.DOFade(1f, 0.3f);
         }
 
         private void ApplyVisuals()
         {
-            frameImage.sprite = _currentConfig.frameSprite;
-            indicatorImage.sprite = _currentConfig.indicatorSprite;
+            view.FrameImage.sprite = _currentConfig.frameSprite;
+            view.IndicatorImage.sprite = _currentConfig.indicatorSprite;
         }
 
         private void PopulateSlots()
         {
-            for (int i = 0; i < slotViews.Count; i++)
+            var slots = view.SlotViews;
+
+            for (int i = 0; i < slots.Count; i++)
             {
                 if (i >= _currentSlots.Count)
                 {
-                    slotViews[i].gameObject.SetActive(false);
+                    slots[i].gameObject.SetActive(false);
                     continue;
                 }
 
-                slotViews[i].gameObject.SetActive(true);
-                slotViews[i].Setup(_currentSlots[i]);
+                slots[i].gameObject.SetActive(true);
+                slots[i].Setup(_currentSlots[i]);
             }
         }
 
@@ -94,25 +98,25 @@ namespace _Game.Scripts.Core.FortuneWheel
         private async UniTaskVoid SpinAsync()
         {
             _isSpinning = true;
-            spinButton.interactable = false;
+            view.SpinButton.interactable = false;
 
             var winningIndex = PickWinningSlot();
             var targetAngle = CalculateTargetAngle(winningIndex);
             var targetRotation = new Vector3(0f, 0f, targetAngle);
 
-            wheelTransform.rotation = Quaternion.identity;
-            frameImage.transform.rotation = Quaternion.identity;
+            view.WheelTransform.rotation = Quaternion.identity;
+            view.FrameImage.transform.rotation = Quaternion.identity;
 
             var sequence = DOTween.Sequence();
             sequence.Append(
-                wheelTransform.DORotate(
+                view.WheelTransform.DORotate(
                     targetRotation,
                     _currentConfig.spinDuration,
                     RotateMode.FastBeyond360
                 ).SetEase(Ease.OutQuart)
             );
             sequence.Join(
-                frameImage.transform.DORotate(
+                view.FrameImage.transform.DORotate(
                     targetRotation,
                     _currentConfig.spinDuration,
                     RotateMode.FastBeyond360
@@ -132,10 +136,10 @@ namespace _Game.Scripts.Core.FortuneWheel
 
             await UniTask.Delay(500);
 
-            await canvasGroup.DOFade(0f, 0.3f).AsyncWaitForCompletion();
-            canvasGroup.gameObject.SetActive(false);
+            await view.CanvasGroup.DOFade(0f, 0.3f).AsyncWaitForCompletion();
+            view.CanvasGroup.gameObject.SetActive(false);
 
-            spinButton.interactable = true;
+            view.SpinButton.interactable = true;
 
             if (reward.rewardType == RewardType.Death)
             {
@@ -151,7 +155,6 @@ namespace _Game.Scripts.Core.FortuneWheel
                     LevelNumber = _currentLevelNumber,
                     RewardType = reward.rewardType,
                     Icon = reward.icon,
-                    Amount = reward.amount,
                     Multiplier = reward.multiplier
                 });
             }
@@ -168,8 +171,8 @@ namespace _Game.Scripts.Core.FortuneWheel
 
         private void HideWheel()
         {
-            canvasGroup.alpha = 0f;
-            canvasGroup.gameObject.SetActive(false);
+            view.CanvasGroup.alpha = 0f;
+            view.CanvasGroup.gameObject.SetActive(false);
         }
     }
 }

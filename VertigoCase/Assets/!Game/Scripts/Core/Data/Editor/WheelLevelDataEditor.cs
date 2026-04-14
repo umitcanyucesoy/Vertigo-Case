@@ -61,7 +61,6 @@ namespace _Game.Scripts.Core.Data.Editor
                     var slot = slotsProp.GetArrayElementAtIndex(s);
                     slot.FindPropertyRelative("rewardType").enumValueIndex = (int)templates[s].rewardType;
                     slot.FindPropertyRelative("icon").objectReferenceValue = templates[s].icon;
-                    slot.FindPropertyRelative("amount").intValue = 0;
                     slot.FindPropertyRelative("multiplier").intValue = 0;
                 }
 
