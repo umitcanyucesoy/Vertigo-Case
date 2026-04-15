@@ -15,6 +15,7 @@ namespace _Game.Scripts.Event
         public RewardType RewardType;
         public Sprite Icon;
         public int Multiplier;
+        public LevelType LevelType;
     }
 
     public struct ShowDeathPanelEvent : IEvent
@@ -41,4 +42,8 @@ namespace _Game.Scripts.Event
         public int NewBalance;
         public int Delta;
     }
+
+    public struct ExitGameEvent : IEvent { }
+
+    public struct WheelSpinStartedEvent : IEvent { }
 }

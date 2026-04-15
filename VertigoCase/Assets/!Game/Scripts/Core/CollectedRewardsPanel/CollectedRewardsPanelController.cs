@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _Game.Scripts.Core.Enums;
 using _Game.Scripts.Event;
 using DG.Tweening;
 using UnityEngine;
@@ -17,6 +18,11 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
         [SerializeField] private Image flyingIconPrefab;
         [SerializeField] private Canvas rootCanvas;
 
+        [Header("Exit")]
+        [SerializeField] private Button exitButton;
+        [SerializeField] private CanvasGroup exitButtonCanvasGroup;
+        [SerializeField] private float disabledAlpha = 0.35f;
+
         [Header("Animation")]
         [SerializeField] private float flyDuration = 0.6f;
         [SerializeField] private float flyingIconScale = 2f;
@@ -27,23 +33,73 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
         public void Init()
         {
             ClearSlots();
+            SetExitButtonState(false);
+
+            exitButton.onClick.AddListener(OnExitClicked);
             EventBus.Subscribe<GiveUpEvent>(OnGiveUp);
+            EventBus.Subscribe<ExitGameEvent>(OnExitGame);
+            EventBus.Subscribe<LevelSelectedEvent>(OnLevelSelected);
+            EventBus.Subscribe<WheelSpinStartedEvent>(OnWheelSpinStarted);
         }
 
         private void OnDestroy()
         {
+            exitButton.onClick.RemoveAllListeners();
             EventBus.Unsubscribe<GiveUpEvent>(OnGiveUp);
+            EventBus.Unsubscribe<ExitGameEvent>(OnExitGame);
+            EventBus.Unsubscribe<LevelSelectedEvent>(OnLevelSelected);
+            EventBus.Unsubscribe<WheelSpinStartedEvent>(OnWheelSpinStarted);
+        }
+
+        private void OnLevelSelected(LevelSelectedEvent e)
+        {
+            var isExitAllowed = e.LevelType == LevelType.SafeZone || e.LevelType == LevelType.SuperZone;
+            SetExitButtonState(isExitAllowed);
+        }
+
+        private void SetExitButtonState(bool active)
+        {
+            exitButton.interactable = active;
+
+            if (exitButtonCanvasGroup != null)
+            {
+                exitButtonCanvasGroup.DOKill();
+                exitButtonCanvasGroup.DOFade(active ? 1f : disabledAlpha, 0.25f);
+            }
+        }
+
+        private void OnExitClicked()
+        {
+            exitButton.interactable = false;
+            EventBus.Publish(new ExitGameEvent());
+        }
+
+        private void OnWheelSpinStarted(WheelSpinStartedEvent e)
+        {
+            SetExitButtonState(false);
         }
 
         private void OnGiveUp(GiveUpEvent e)
         {
             ClearSlots();
+            SetExitButtonState(false);
+        }
+
+        private void OnExitGame(ExitGameEvent e)
+        {
+            ClearSlots();
+            SetExitButtonState(false);
         }
 
         private void ClearSlots()
         {
             foreach (Transform child in slotsParent)
+            {
+                child.DOKill();
+                var cg = child.GetComponent<CanvasGroup>();
+                if (cg != null) cg.DOKill();
                 Destroy(child.gameObject);
+            }
 
             _slots.Clear();
         }

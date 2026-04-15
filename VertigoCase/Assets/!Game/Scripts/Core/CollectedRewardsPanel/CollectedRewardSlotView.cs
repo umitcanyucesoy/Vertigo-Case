@@ -41,6 +41,12 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
             transform.DOPunchScale(Vector3.one * 0.25f, 0.3f, 6, 0.6f);
         }
 
+        private void OnDestroy()
+        {
+            transform.DOKill();
+            canvasGroup.DOKill();
+        }
+
         private void RefreshText()
         {
             if (Total <= 0)

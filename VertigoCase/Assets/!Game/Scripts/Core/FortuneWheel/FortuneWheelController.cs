@@ -99,6 +99,7 @@ namespace _Game.Scripts.Core.FortuneWheel
         {
             _isSpinning = true;
             view.SpinButton.interactable = false;
+            EventBus.Publish(new WheelSpinStartedEvent());
 
             var winningIndex = PickWinningSlot();
             var targetAngle = CalculateTargetAngle(winningIndex);
@@ -155,7 +156,8 @@ namespace _Game.Scripts.Core.FortuneWheel
                     LevelNumber = _currentLevelNumber,
                     RewardType = reward.rewardType,
                     Icon = reward.icon,
-                    Multiplier = reward.multiplier
+                    Multiplier = reward.multiplier,
+                    LevelType = _currentConfig.wheelType
                 });
             }
         }

@@ -30,6 +30,7 @@ namespace _Game.Scripts.Core.LevelSelector
             EventBus.Subscribe<WheelRewardCollectedEvent>(OnRewardCollected);
             EventBus.Subscribe<GiveUpEvent>(OnGiveUp);
             EventBus.Subscribe<ReviveEvent>(OnRevive);
+            EventBus.Subscribe<ExitGameEvent>(OnExitGame);
         }
 
         private void OnDestroy()
@@ -37,6 +38,7 @@ namespace _Game.Scripts.Core.LevelSelector
             EventBus.Unsubscribe<WheelRewardCollectedEvent>(OnRewardCollected);
             EventBus.Unsubscribe<GiveUpEvent>(OnGiveUp);
             EventBus.Unsubscribe<ReviveEvent>(OnRevive);
+            EventBus.Unsubscribe<ExitGameEvent>(OnExitGame);
         }
 
         private void OnRewardCollected(WheelRewardCollectedEvent e)
@@ -52,6 +54,11 @@ namespace _Game.Scripts.Core.LevelSelector
         private void OnRevive(ReviveEvent e)
         {
             AdvanceLevel();
+        }
+
+        private void OnExitGame(ExitGameEvent e)
+        {
+            ResetLevel();
         }
 
         private void ResetLevel()
