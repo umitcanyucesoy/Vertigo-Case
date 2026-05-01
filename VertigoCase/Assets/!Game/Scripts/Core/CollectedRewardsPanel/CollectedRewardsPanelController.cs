@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using _Game.Scripts.Core.Enums;
+using _Game.Scripts.Core.ScriptableObjects.Config;
 using _Game.Scripts.Event;
 using DG.Tweening;
 using UnityEngine;
@@ -9,6 +10,9 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
 {
     public class CollectedRewardsPanelController : MonoBehaviour, ICollectedRewardsPanelController
     {
+        [Header("Data")]
+        [SerializeField] private CollectedRewardsPanelData config;
+        
         [Header("Grid")]
         [SerializeField] private RectTransform slotsParent;
         [SerializeField] private CollectedRewardSlotView slotPrefab;
@@ -21,12 +25,6 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
         [Header("Exit")]
         [SerializeField] private Button exitButton;
         [SerializeField] private CanvasGroup exitButtonCanvasGroup;
-        [SerializeField] private float disabledAlpha = 0.35f;
-
-        [Header("Animation")]
-        [SerializeField] private float flyDuration = 0.6f;
-        [SerializeField] private float flyingIconScale = 2f;
-        [SerializeField] private Ease flyEase = Ease.InOutQuad;
 
         private readonly Dictionary<Sprite, CollectedRewardSlotView> _slots = new();
 
@@ -61,10 +59,13 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
         {
             exitButton.interactable = active;
 
-            if (exitButtonCanvasGroup != null)
+            if (exitButtonCanvasGroup)
             {
                 exitButtonCanvasGroup.DOKill();
-                exitButtonCanvasGroup.DOFade(active ? 1f : disabledAlpha, 0.25f);
+                exitButtonCanvasGroup.DOFade(
+                    active ? 1f : config.disabledAlpha,
+                    config.exitButtonFadeDuration
+                );
             }
         }
 
@@ -108,7 +109,7 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
         {
             var flyingIcon = Instantiate(flyingIconPrefab, flyingIconsParent);
             flyingIcon.sprite = icon;
-            flyingIcon.rectTransform.localScale = Vector3.one * flyingIconScale;
+            flyingIcon.rectTransform.localScale = Vector3.one * config.flyingIconScale;
 
             var startLocal = WorldToLocal(flyingIconsParent, worldStartPosition);
             flyingIcon.rectTransform.anchoredPosition = startLocal;
@@ -118,16 +119,22 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
             if (!hasExisting)
             {
                 targetSlot = Instantiate(slotPrefab, slotsParent);
+                targetSlot.Init(config);
                 targetSlot.Setup(icon, multiplier);
                 _slots.Add(icon, targetSlot);
                 Canvas.ForceUpdateCanvases();
             }
 
             var endLocal = WorldToLocal(flyingIconsParent, targetSlot.IconRect.position);
+            var endScale = config.flyingIconScale * config.flyingIconEndScaleMultiplier;
 
             var sequence = DOTween.Sequence();
-            sequence.Append(flyingIcon.rectTransform.DOAnchorPos(endLocal, flyDuration).SetEase(flyEase));
-            sequence.Join(flyingIcon.rectTransform.DOScale(Vector3.one * (flyingIconScale * 0.9f), flyDuration).SetEase(Ease.InOutSine));
+            sequence.Append(flyingIcon.rectTransform
+                .DOAnchorPos(endLocal, config.flyDuration)
+                .SetEase(config.flyEase));
+            sequence.Join(flyingIcon.rectTransform
+                .DOScale(Vector3.one * endScale, config.flyDuration)
+                .SetEase(Ease.InOutSine));
             sequence.OnComplete(() =>
             {
                 Destroy(flyingIcon.gameObject);

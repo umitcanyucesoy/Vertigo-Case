@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcf008f197db4742bde522e350f0877, type: 3}
   m_Name: EconomyConfig
   m_EditorClassIdentifier: 
-  startingGold: 500
+  startingBalances:
+  - currencyType: 0
+    amount: 1000
+  - currencyType: 1
+    amount: 1000
+  reviveCurrency: 1
   reviveCost: 150
+  rewardMappings:
+  - rewardType: 0
+    currencyType: 1
+  - rewardType: 1
+    currencyType: 0

@@ -1,4 +1,4 @@
-using _Game.Scripts.Core.Data;
+using _Game.Scripts.Core.ScriptableObjects.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

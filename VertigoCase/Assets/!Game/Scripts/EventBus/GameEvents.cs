@@ -37,8 +37,9 @@ namespace _Game.Scripts.Event
         public int LevelNumber;
     }
 
-    public struct GoldChangedEvent : IEvent
+    public struct CurrencyChangedEvent : IEvent
     {
+        public CurrencyType CurrencyType;
         public int NewBalance;
         public int Delta;
     }

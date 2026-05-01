@@ -1,4 +1,7 @@
 using _Game.Scripts.Core.CollectedRewardsPanel;
+using _Game.Scripts.Core.ScriptableObjects;
+using _Game.Scripts.Core.ScriptableObjects.Config;
+using _Game.Scripts.Core.ScriptableObjects.UIPanelData;
 using _Game.Scripts.Event;
 using DG.Tweening;
 using UnityEngine;
@@ -8,6 +11,7 @@ namespace _Game.Scripts.Core.RewardPanel
     [RequireComponent(typeof(RewardPanelView))]
     public class RewardPanelController : MonoBehaviour, IRewardPanelController
     {
+        [SerializeField] private RewardPanelData panelData;
         [SerializeField] private RewardPanelView view;
 
         private ICollectedRewardsPanelController _collectedRewardsPanel;
@@ -16,7 +20,6 @@ namespace _Game.Scripts.Core.RewardPanel
         public void Init(ICollectedRewardsPanelController collectedRewardsPanel)
         {
             _collectedRewardsPanel = collectedRewardsPanel;
-
             view.CollectButton.onClick.AddListener(OnCollectClicked);
             EventBus.Subscribe<ShowRewardPanelEvent>(OnShowReward);
             Hide();
@@ -44,7 +47,7 @@ namespace _Game.Scripts.Core.RewardPanel
 
             view.CanvasGroup.alpha = 0f;
             view.CanvasGroup.gameObject.SetActive(true);
-            view.CanvasGroup.DOFade(1f, 0.3f);
+            view.CanvasGroup.DOFade(1f, panelData.fadeInDuration);
         }
 
         private void OnCollectClicked()
@@ -61,7 +64,7 @@ namespace _Game.Scripts.Core.RewardPanel
                 Multiplier = _pendingReward.Multiplier
             };
 
-            view.CanvasGroup.DOFade(0f, 0.3f).OnComplete(() =>
+            view.CanvasGroup.DOFade(0f, panelData.fadeOutDuration).OnComplete(() =>
             {
                 view.CanvasGroup.gameObject.SetActive(false);
                 view.CollectButton.interactable = true;

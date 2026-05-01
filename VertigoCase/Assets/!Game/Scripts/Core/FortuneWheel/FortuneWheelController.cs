@@ -1,6 +1,8 @@
 using System.Collections.Generic;
-using _Game.Scripts.Core.Data;
 using _Game.Scripts.Core.Enums;
+using _Game.Scripts.Core.ScriptableObjects.Config;
+using _Game.Scripts.Core.ScriptableObjects.Data;
+using _Game.Scripts.Core.ScriptableObjects.UIPanelData;
 using _Game.Scripts.Event;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -63,7 +65,7 @@ namespace _Game.Scripts.Core.FortuneWheel
 
             view.CanvasGroup.alpha = 0f;
             view.CanvasGroup.gameObject.SetActive(true);
-            view.CanvasGroup.DOFade(1f, 0.3f);
+            view.CanvasGroup.DOFade(1f, _currentConfig.fadeInDuration);
         }
 
         private void ApplyVisuals()
@@ -135,9 +137,9 @@ namespace _Game.Scripts.Core.FortuneWheel
 
             var reward = _currentSlots[slotIndex];
 
-            await UniTask.Delay(500);
+            await UniTask.Delay(_currentConfig.postSpinDelayMs);
 
-            await view.CanvasGroup.DOFade(0f, 0.3f).AsyncWaitForCompletion();
+            await view.CanvasGroup.DOFade(0f, _currentConfig.fadeOutDuration).AsyncWaitForCompletion();
             view.CanvasGroup.gameObject.SetActive(false);
 
             view.SpinButton.interactable = true;
@@ -166,9 +168,9 @@ namespace _Game.Scripts.Core.FortuneWheel
 
         private float CalculateTargetAngle(int slotIndex)
         {
-            const float slotAngle = 45f;
-            int fullRotations = _currentConfig.minFullRotations + Random.Range(0, 3);
-            return fullRotations * 360f - slotIndex * slotAngle;
+            int fullRotations = _currentConfig.minFullRotations
+                                + Random.Range(0, _currentConfig.extraRotationRange);
+            return fullRotations * 360f - slotIndex * _currentConfig.slotAngle;
         }
 
         private void HideWheel()

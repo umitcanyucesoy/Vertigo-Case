@@ -1,4 +1,7 @@
 using _Game.Scripts.Core.Economy;
+using _Game.Scripts.Core.ScriptableObjects.Config;
+using _Game.Scripts.Core.ScriptableObjects.Data;
+using _Game.Scripts.Core.ScriptableObjects.UIPanelData;
 using _Game.Scripts.Event;
 using DG.Tweening;
 using UnityEngine;
@@ -9,16 +12,17 @@ namespace _Game.Scripts.Core.DeathPanel
     public class DeathPanelController : MonoBehaviour, IDeathPanelController
     {
         [SerializeField] private DeathPanelView view;
-
+        [SerializeField] private DeathPanelData panelData;
+        
         private IEconomyService _economyService;
-        private EconomyConfig _economyConfig;
+        private EconomyData _economyData;
         private int _pendingLevelNumber;
 
-        public void Init(IEconomyService economyService, EconomyConfig economyConfig)
+        public void Init(IEconomyService economyService, EconomyData economyData)
         {
             _economyService = economyService;
-            _economyConfig = economyConfig;
-
+            _economyData = economyData;
+            
             view.GiveUpButton.onClick.AddListener(OnGiveUpClicked);
             view.SaveButton.onClick.AddListener(OnSaveClicked);
             EventBus.Subscribe<ShowDeathPanelEvent>(OnShowDeath);
@@ -43,15 +47,15 @@ namespace _Game.Scripts.Core.DeathPanel
         {
             _pendingLevelNumber = e.LevelNumber;
             RefreshSaveState();
-
+            
             view.CanvasGroup.alpha = 0f;
             view.CanvasGroup.gameObject.SetActive(true);
-            view.CanvasGroup.DOFade(1f, 0.3f);
+            view.CanvasGroup.DOFade(1f, panelData.fadeInDuration);
         }
 
         private void OnGiveUpClicked()
         {
-            view.CanvasGroup.DOFade(0f, 0.3f).OnComplete(() =>
+            view.CanvasGroup.DOFade(0f, panelData.fadeOutDuration).OnComplete(() =>
             {
                 view.CanvasGroup.gameObject.SetActive(false);
                 EventBus.Publish(new GiveUpEvent());
@@ -60,18 +64,22 @@ namespace _Game.Scripts.Core.DeathPanel
 
         private void OnSaveClicked()
         {
-            var cost = _economyConfig.ReviveCost;
+            var cost = _economyData.reviveCost;
+            var currency = _economyData.reviveCurrency;
 
-            if (!_economyService.TrySpend(cost))
+            if (!_economyService.TrySpend(currency, cost))
             {
                 view.SaveButton.transform.DOKill();
-                view.SaveButton.transform.DOShakePosition(0.35f, 12f, 20);
+                view.SaveButton.transform.DOShakePosition(
+                    panelData.shakeDuration,
+                    panelData.shakeStrength,
+                    panelData.shakeVibrato
+                );
                 return;
             }
 
             var levelNumber = _pendingLevelNumber;
-
-            view.CanvasGroup.DOFade(0f, 0.3f).OnComplete(() =>
+            view.CanvasGroup.DOFade(0f, panelData.fadeOutDuration).OnComplete(() =>
             {
                 view.CanvasGroup.gameObject.SetActive(false);
                 EventBus.Publish(new ReviveEvent { LevelNumber = levelNumber });
@@ -80,12 +88,11 @@ namespace _Game.Scripts.Core.DeathPanel
 
         private void RefreshSaveState()
         {
-            var cost = _economyConfig.ReviveCost;
-
-            if (view.SaveCostText != null)
-                view.SaveCostText.text = cost.ToString();
-
-            view.SaveButton.interactable = _economyService.CanAfford(cost);
+            var cost = _economyData.reviveCost;
+            var currency = _economyData.reviveCurrency;
+            
+            view.SaveCostText.text = cost.ToString();
+            view.SaveButton.interactable = _economyService.CanAfford(currency, cost);
         }
 
         private void Hide()

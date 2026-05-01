@@ -1,3 +1,4 @@
+using _Game.Scripts.Core.ScriptableObjects.Config;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -11,9 +12,16 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
         [SerializeField] private TextMeshProUGUI multiplierText;
         [SerializeField] private CanvasGroup canvasGroup;
 
+        private CollectedRewardsPanelData _config;
+
         public Sprite Sprite { get; private set; }
         public int Total { get; private set; }
         public RectTransform IconRect => icon.rectTransform;
+
+        public void Init(CollectedRewardsPanelData config)
+        {
+            _config = config;
+        }
 
         public void Setup(Sprite sprite, int multiplier)
         {
@@ -23,13 +31,13 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
             RefreshText();
 
             canvasGroup.alpha = 0f;
-            transform.localScale = Vector3.one * 0.6f;
+            transform.localScale = Vector3.one * _config.slotInitialScale;
         }
 
         public void PlayAppear()
         {
-            canvasGroup.DOFade(1f, 0.25f);
-            transform.DOScale(Vector3.one, 0.35f).SetEase(Ease.OutBack);
+            canvasGroup.DOFade(1f, _config.slotAppearFadeDuration);
+            transform.DOScale(Vector3.one, _config.slotAppearScaleDuration).SetEase(_config.slotAppearEase);
         }
 
         public void Add(int multiplier)
@@ -38,7 +46,12 @@ namespace _Game.Scripts.Core.CollectedRewardsPanel
             RefreshText();
             transform.DOKill();
             transform.localScale = Vector3.one;
-            transform.DOPunchScale(Vector3.one * 0.25f, 0.3f, 6, 0.6f);
+            transform.DOPunchScale(
+                Vector3.one * _config.slotPunchScale,
+                _config.slotPunchDuration,
+                _config.slotPunchVibrato,
+                _config.slotPunchElasticity
+            );
         }
 
         private void OnDestroy()

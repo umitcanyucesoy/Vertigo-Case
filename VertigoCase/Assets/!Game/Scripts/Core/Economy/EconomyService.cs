@@ -1,34 +1,91 @@
+using System.Collections.Generic;
+using _Game.Scripts.Core.Enums;
+using _Game.Scripts.Core.ScriptableObjects.Data;
 using _Game.Scripts.Event;
 
 namespace _Game.Scripts.Core.Economy
 {
     public class EconomyService : IEconomyService
     {
-        public int Gold { get; private set; }
+        private readonly Dictionary<CurrencyType, int> _balances = new();
+        private readonly Dictionary<RewardType, CurrencyType> _rewardMappings = new();
+        private readonly Dictionary<RewardType, int> _pendingRewards = new();
 
-        public EconomyService(EconomyConfig config)
+        public EconomyService(EconomyData data)
         {
-            Gold = config.StartingGold;
+            foreach (var balance in data.startingBalances)
+                _balances[balance.currencyType] = balance.amount;
+
+            foreach (var map in data.rewardMappings)
+                _rewardMappings[map.rewardType] = map.currencyType;
+
+            EventBus.Subscribe<WheelRewardCollectedEvent>(OnRewardCollected);
+            EventBus.Subscribe<ExitGameEvent>(OnExitGame);
+            EventBus.Subscribe<GiveUpEvent>(OnGiveUp);
         }
 
-        public bool CanAfford(int amount) => amount >= 0 && Gold >= amount;
-
-        public bool TrySpend(int amount)
+        ~EconomyService()
         {
-            if (!CanAfford(amount))
-                return false;
+            EventBus.Unsubscribe<WheelRewardCollectedEvent>(OnRewardCollected);
+            EventBus.Unsubscribe<ExitGameEvent>(OnExitGame);
+            EventBus.Unsubscribe<GiveUpEvent>(OnGiveUp);
+        }
 
-            Gold -= amount;
-            EventBus.Publish(new GoldChangedEvent { NewBalance = Gold, Delta = -amount });
+        private void OnGiveUp(GiveUpEvent e) => _pendingRewards.Clear();
+        public int GetBalance(CurrencyType currencyType) => _balances.GetValueOrDefault(currencyType, 0);
+        public bool CanAfford(CurrencyType currencyType, int amount) => amount >= 0 && GetBalance(currencyType) >= amount;
+        
+        public bool TrySpend(CurrencyType currencyType, int amount)
+        {
+            if (!CanAfford(currencyType, amount))
+                return false;
+                
+            _balances[currencyType] -= amount;
+
+            EventBus.Publish(new CurrencyChangedEvent
+            {
+                CurrencyType = currencyType,
+                NewBalance = _balances[currencyType],
+                Delta = -amount
+            });
+
             return true;
         }
 
-        public void Add(int amount)
+        private void OnRewardCollected(WheelRewardCollectedEvent e)
+        {
+            if (!_pendingRewards.TryAdd(e.RewardType, e.Multiplier))
+                _pendingRewards[e.RewardType] += e.Multiplier;
+        }
+
+        private void OnExitGame(ExitGameEvent e)
+        {
+            foreach (var pendingReward in _pendingRewards)
+                ProcessReward(pendingReward.Key, pendingReward.Value);
+            
+            _pendingRewards.Clear();
+        }
+
+
+        public void ProcessReward(RewardType rewardType, int amount)
+        {
+            if (_rewardMappings.TryGetValue(rewardType, out var currencyType))
+                Add(currencyType, amount);
+        }
+
+        public void Add(CurrencyType currencyType, int amount)
         {
             if (amount <= 0) return;
-
-            Gold += amount;
-            EventBus.Publish(new GoldChangedEvent { NewBalance = Gold, Delta = amount });
+            
+            if (!_balances.TryAdd(currencyType, amount))
+                _balances[currencyType] += amount;
+                
+            EventBus.Publish(new CurrencyChangedEvent
+            {
+                CurrencyType = currencyType,
+                NewBalance = _balances[currencyType],
+                Delta = amount
+            });
         }
     }
 }
